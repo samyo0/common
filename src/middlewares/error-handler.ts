@@ -8,6 +8,7 @@ export const errorHandler = (err: Error, req: Request, res: Response, next: Next
     })
   }
 
+  console.error(err);
   return res.status(400).send({
     errors: [
       {
